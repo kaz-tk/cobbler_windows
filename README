@@ -1,0 +1,38 @@
+========================================
+Cobbler Windows PE配信＆自動インストール
+========================================
+
+
+
+#. 自分用のWindows PE環境を設定
+
+##. Windows ADK(旧：AIK)をインストール
+##. Windows PE作成環境を作る。
+###. Windows PEのマウント
+###. 自分のCobblerサーバのアドレスを設定
+##. 自動応答ファイルの作成
+
+#. 自動インストール環境のセットアップ
+##. ファイルをコピーする。
+
+
+
+以下のファイルのサーバーアドレスを自分用に更新
+
+File: copy_to_windows/opt/bootstrap/init.cmd
+set   COBBLER_SERV=172.16.0.3
+
+
+動作
+===============
+
+#. PXEブートして、memdiskとwindows peのイメージを配信する。
+#. windows peに設定しておいた、init.cmdが、ファイルのマウント、セットアッププログラムの起動などを行ってくれる。
+#. セットアッププログラムが起動したら、自動応答ファイルに従って、Windowsのセットアップを行ってくれる。
+
+自動応答ファイルは自社で利用する事を想定してRAIDにしてあるので、
+HDDが２玉必要
+その他、WindowsPEにドライバを組み込んだりする必要がある。
+
+
+Thanks to　jmj https://github.com/jmj http://www.letifer.org/2014/03/26/cobbler-and-windows/
