@@ -7,15 +7,17 @@ Cobbler Windows PE配信＆自動インストール
 #. 自分用のWindows PE環境を設定
 
 ##. Windows ADK(旧：AIK)をインストール
-##. Windows PE作成環境を作る。
+##. Windows PE作成環境を作る。（詳細は、jmjさんのWeb記事を参照）
 ###. Windows PEのマウント
-###. 自分のCobblerサーバのアドレスを設定
+####. init.cmd/getsysname.cmd をWinPE環境に作成
+####. 自分のCobblerサーバのアドレスを設定
 ##. 自動応答ファイルの作成
 
 #. 自動インストール環境のセットアップ
 ##. ファイルをコピーする。
 
 
+------------
 
 以下のファイルのサーバーアドレスを自分用に更新
 
